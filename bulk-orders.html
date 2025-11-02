@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -41,21 +43,23 @@
     </header>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-parallax="true" data-parallax-speed="0.5">
+        <div class="floating-bg"></div>
         <div class="container">
-            <h1>Power Your Projects with Custom & Bulk Orders</h1>
-            <p>Volume pricing and dedicated support for your large-scale projects</p>
+            <h1 class="animate-on-scroll">Power Your Projects with Custom & Bulk Orders</h1>
+            <p class="animate-on-scroll">Volume pricing and dedicated support for your large-scale projects</p>
         </div>
     </section>
 
     <!-- Bulk Inquiry Section -->
     <section class="bulk-inquiry-section">
+        <div class="floating-bg"></div>
         <div class="container">
-            <div class="bulk-intro">
-                <p class="intro-text">At SuryaKit Solutions, we specialize in supplying large-scale and custom solar kit orders for our EPC partners. Benefit from volume pricing, dedicated account management, and logistics tailored to your project schedule. Fill out the form below, and our team will get back to you with a detailed quote within 24 business hours.</p>
+            <div class="bulk-intro animate-on-scroll">
+                <p class="intro-text">At Surya Ghar Kits, we specialize in supplying large-scale and custom solar kit orders for our EPC partners. Benefit from volume pricing, dedicated account management, and logistics tailored to your project schedule. Fill out the form below, and our team will get back to you with a detailed quote within 24 business hours.</p>
             </div>
 
-            <div class="form-container">
+            <div class="form-container mouse-parallax animate-on-scroll">
                 <form id="bulkOrderForm" class="bulk-form">
                     <div class="form-row">
                         <div class="form-group">
@@ -163,28 +167,36 @@
             </div>
 
             <!-- Benefits Section -->
-            <div class="bulk-benefits">
-                <h2>Why Choose Bulk Orders with SuryaKit?</h2>
+            <div class="bulk-benefits" data-parallax="true" data-parallax-speed="0.3">
+                <h2 class="animate-on-scroll">Why Choose Bulk Orders with Surya Ghar Kits?</h2>
                 <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <i class="fas fa-percentage"></i>
-                        <h3>Volume Discounts</h3>
-                        <p>Competitive pricing that improves with order size</p>
+                    <div class="benefit-card mouse-parallax animate-on-scroll">
+                        <div class="parallax-layer">
+                            <i class="fas fa-percentage"></i>
+                            <h3>Volume Discounts</h3>
+                            <p>Competitive pricing that improves with order size</p>
+                        </div>
                     </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-user-tie"></i>
-                        <h3>Dedicated Account Manager</h3>
-                        <p>Single point of contact for all your needs</p>
+                    <div class="benefit-card mouse-parallax animate-on-scroll">
+                        <div class="parallax-layer">
+                            <i class="fas fa-user-tie"></i>
+                            <h3>Dedicated Account Manager</h3>
+                            <p>Single point of contact for all your needs</p>
+                        </div>
                     </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-cogs"></i>
-                        <h3>Custom Configurations</h3>
-                        <p>Tailored solutions to match your specifications</p>
+                    <div class="benefit-card mouse-parallax animate-on-scroll">
+                        <div class="parallax-layer">
+                            <i class="fas fa-cogs"></i>
+                            <h3>Custom Configurations</h3>
+                            <p>Tailored solutions to match your specifications</p>
+                        </div>
                     </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-calendar-alt"></i>
-                        <h3>Flexible Scheduling</h3>
-                        <p>Delivery aligned with your project timeline</p>
+                    <div class="benefit-card mouse-parallax animate-on-scroll">
+                        <div class="parallax-layer">
+                            <i class="fas fa-calendar-alt"></i>
+                            <h3>Flexible Scheduling</h3>
+                            <p>Delivery aligned with your project timeline</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,5 +254,23 @@
 
     <script src="js/main.js"></script>
     <script src="js/bulk-form.js"></script>
+    <script src="js/parallax.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Update scroll progress
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+    </script>
 </body>
 </html>
