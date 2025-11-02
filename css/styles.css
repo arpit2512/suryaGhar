@@ -93,6 +93,22 @@ h4 { font-size: 1.25rem; }
     transition: padding 0.3s ease;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.header.scrolled .logo img {
+    height: 40px;
+}
+
 .logo h1 {
     font-size: 1.8rem;
     background: linear-gradient(135deg, var(--primary-color) 0%, #ff8533 100%);
@@ -108,11 +124,17 @@ h4 { font-size: 1.25rem; }
     text-decoration: none;
     color: inherit;
     transition: transform 0.3s ease;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo a:hover {
     transform: scale(1.05);
+}
+
+.logo a:hover img {
+    transform: scale(1.1);
 }
 
 .nav-menu ul {
