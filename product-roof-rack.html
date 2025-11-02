@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IronRidge Solar Panel Roof Rack Kit - Professional mounting solution for 6 to 36 solar panels">
+    <title>Solar Panel Roof Rack Kit - Surya Ghar Kits</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-detail-section {
+            padding: 3rem 0;
+        }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-gallery {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .product-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-detail-info h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-detail-price {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: #ffd93d;
+        }
+
+        .size-selector {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .size-option {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .size-option:hover {
+            border-color: var(--primary-color);
+        }
+
+        .size-option.selected {
+            border-color: var(--primary-color);
+            background: rgba(255, 107, 0, 0.1);
+        }
+
+        .product-detail-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .product-tabs {
+            margin-top: 3rem;
+        }
+
+        .tabs-nav {
+            display: flex;
+            gap: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .tab-button.active {
+            color: var(--primary-color);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-detail-actions {
+                flex-direction: column;
+            }
+
+            .tabs-nav {
+                gap: 1rem;
+            }
+
+            .size-option {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Surya Ghar Kits</a></h1>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html" class="active">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#partner">Become a Partner</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="bulk-orders.html" class="btn btn-primary">Get a Bulk Quote</a>
+                    <button class="icon-btn" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+                    <button class="icon-btn"><i class="fas fa-user"></i></button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container" style="padding: 1rem 20px;">
+        <p style="color: var(--text-light);">
+            <a href="index.html" style="text-decoration: none; color: var(--text-light);">Home</a> /
+            <a href="shop.html" style="text-decoration: none; color: var(--text-light);">Our Kits</a> /
+            <span>Solar Panel Roof Rack Kit</span>
+        </p>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <img src="https://shopsolarkits.com/cdn/shop/files/PVX-ROOF-MOUNT-KIT-12.jpg?v=1725495803&width=800" alt="IronRidge Solar Panel Roof Rack Kit" id="mainImage">
+                </div>
+
+                <div class="product-detail-info">
+                    <h1>IronRidge Solar Panel Roof Rack Kit</h1>
+                    <p class="product-brand">Professional Mounting System by TPS</p>
+
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span style="color: var(--text-light);">5.0 out of 5 (2 reviews)</span>
+                    </div>
+
+                    <div class="product-detail-price" id="productPrice">₹71,500</div>
+
+                    <p style="color: var(--text-light); line-height: 1.8;">
+                        The perfect solution for anyone looking to install solar panels on a rooftop quickly and easily.
+                        With this kit, you can choose the exact number of solar panels you need, and we'll ship you a
+                        custom racking kit with all necessary hardware for a professional installation.
+                    </p>
+
+                    <div class="size-selector">
+                        <h3>Select Kit Size:</h3>
+
+                        <div class="size-option selected" data-price="71500" data-capacity="2.4" data-image="PVX-ROOF-MOUNT-KIT-6.jpg" onclick="selectSize(this)">
+                            <div>
+                                <strong>6 Panel Kit</strong>
+                                <p style="margin: 0; color: var(--text-light);">Compatible with 300-410W panels (~2.4kW system)</p>
+                            </div>
+                            <strong style="color: var(--primary-color);">₹71,500</strong>
+                        </div>
+
+                        <div class="size-option" data-price="92300" data-capacity="3.2" data-image="PVX-ROOF-MOUNT-KIT-8.jpg" onclick="selectSize(this)">
+                            <div>
+                                <strong>8 Panel Kit</strong>
+                                <p style="margin: 0; color: var(--text-light);">Compatible with 300-410W panels (~3.2kW system)</p>
+                            </div>
+                            <strong style="color: var(--primary-color);">₹92,300</strong>
+                        </div>
+
+                        <div class="size-option" data-price="133000" data-capacity="4.8" data-image="PVX-ROOF-MOUNT-KIT-12.jpg" onclick="selectSize(this)">
+                            <div>
+                                <strong>12 Panel Kit</strong>
+                                <p style="margin: 0; color: var(--text-light);">Compatible with 300-410W panels (~4.8kW system)</p>
+                            </div>
+                            <strong style="color: var(--primary-color);">₹1,33,000</strong>
+                        </div>
+
+                        <div class="size-option" data-price="165500" data-capacity="7.2" data-image="PVX-ROOF-MOUNT-KIT-18.jpg" onclick="selectSize(this)">
+                            <div>
+                                <strong>18 Panel Kit</strong>
+                                <p style="margin: 0; color: var(--text-light);">Compatible with 300-410W panels (~7.2kW system)</p>
+                            </div>
+                            <strong style="color: var(--primary-color);">₹1,65,500</strong>
+                        </div>
+
+                        <div class="size-option" data-price="207000" data-capacity="9.6" data-image="PVX-ROOF-MOUNT-KIT-24.jpg" onclick="selectSize(this)">
+                            <div>
+                                <strong>24 Panel Kit</strong>
+                                <p style="margin: 0; color: var(--text-light);">Compatible with 300-410W panels (~9.6kW system)</p>
+                            </div>
+                            <strong style="color: var(--primary-color);">₹2,07,000</strong>
+                        </div>
+
+                        <div class="size-option" data-price="304000" data-capacity="14.4" data-image="PVX-ROOF-MOUNT-KIT-36.jpg" onclick="selectSize(this)">
+                            <div>
+                                <strong>36 Panel Kit</strong>
+                                <p style="margin: 0; color: var(--text-light);">Compatible with 300-410W panels (~14.4kW system)</p>
+                            </div>
+                            <strong style="color: var(--primary-color);">₹3,04,000</strong>
+                        </div>
+                    </div>
+
+                    <div class="product-detail-actions">
+                        <button class="btn btn-primary btn-large add-to-cart" data-id="roof-rack">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <a href="bulk-orders.html" class="btn btn-outline btn-large">
+                            <i class="fas fa-file-alt"></i> Request Bulk Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-button active" data-tab="features">Features</button>
+                    <button class="tab-button" data-tab="components">What's Included</button>
+                    <button class="tab-button" data-tab="specs">Specifications</button>
+                    <button class="tab-button" data-tab="installation">Installation Guide</button>
+                </div>
+
+                <!-- Features Tab -->
+                <div class="tab-content active" id="features">
+                    <h2>Product Features & Benefits</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-tools" style="color: var(--primary-color);"></i> Easy Installation</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>Pre-cut rails for exact panel configuration</li>
+                                <li>All mounting hardware included</li>
+                                <li>Clear installation instructions</li>
+                                <li>No special tools required</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-shield-alt" style="color: var(--success-color);"></i> Durable Construction</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>Corrosion-resistant aluminum rails</li>
+                                <li>Stainless steel hardware</li>
+                                <li>Wind-rated up to 160 km/h</li>
+                                <li>25-year manufacturer warranty</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-home" style="color: var(--secondary-color);"></i> Universal Compatibility</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>Works with 300W-410W panels</li>
+                                <li>Suitable for pitched or flat roofs</li>
+                                <li>Adjustable tilt angle options</li>
+                                <li>Compatible with all major panel brands</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-certificate" style="color: var(--accent-color);"></i> Certified Quality</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>Engineered to international standards</li>
+                                <li>Structural load calculations included</li>
+                                <li>Fire-rated materials</li>
+                                <li>Professional-grade components</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Components Tab -->
+                <div class="tab-content" id="components">
+                    <h2>What's Included in the Kit</h2>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 1rem; background: var(--bg-light); margin-bottom: 1rem; border-radius: 5px;">
+                            <h4><i class="fas fa-bars"></i> IronRidge XR Rails</h4>
+                            <p style="color: var(--text-light); margin: 0.5rem 0 0 0;">
+                                Pre-cut aluminum mounting rails in exact lengths for your panel configuration.
+                                Lightweight yet strong, with integrated wire management channels.
+                            </p>
+                        </li>
+                        <li style="padding: 1rem; background: var(--bg-light); margin-bottom: 1rem; border-radius: 5px;">
+                            <h4><i class="fas fa-grip-vertical"></i> Roof Attachments</h4>
+                            <p style="color: var(--text-light); margin: 0.5rem 0 0 0;">
+                                Flashfoot roof attachments or L-feet (depending on roof type).
+                                Waterproof flashing included to prevent roof leaks.
+                            </p>
+                        </li>
+                        <li style="padding: 1rem; background: var(--bg-light); margin-bottom: 1rem; border-radius: 5px;">
+                            <h4><i class="fas fa-compress-arrows-alt"></i> Mid & End Clamps</h4>
+                            <p style="color: var(--text-light); margin: 0.5rem 0 0 0;">
+                                Exact quantity of mid clamps and end clamps to secure your panels.
+                                Bonding jumpers included for electrical grounding.
+                            </p>
+                        </li>
+                        <li style="padding: 1rem; background: var(--bg-light); margin-bottom: 1rem; border-radius: 5px;">
+                            <h4><i class="fas fa-screwdriver"></i> Mounting Hardware</h4>
+                            <p style="color: var(--text-light); margin: 0.5rem 0 0 0;">
+                                All bolts, nuts, washers, and lag screws needed for installation.
+                                Stainless steel construction for corrosion resistance.
+                            </p>
+                        </li>
+                        <li style="padding: 1rem; background: var(--bg-light); margin-bottom: 1rem; border-radius: 5px;">
+                            <h4><i class="fas fa-file-alt"></i> Installation Manual</h4>
+                            <p style="color: var(--text-light); margin: 0.5rem 0 0 0;">
+                                Step-by-step installation guide with diagrams.
+                                Includes load calculations and structural specifications.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Specifications Tab -->
+                <div class="tab-content" id="specs">
+                    <h2>Technical Specifications</h2>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                        <h3>System Specifications</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Brand:</strong> IronRidge / TPS
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Rail Material:</strong> 6005-T5 Aluminum Alloy
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Hardware Material:</strong> Stainless Steel 304
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Panel Compatibility:</strong> 300W - 410W (most brands)
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Roof Types:</strong> Pitched, Flat, Metal, Tile
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Wind Rating:</strong> Up to 160 km/h (design dependent)
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Snow Load Rating:</strong> Up to 240 kg/m²
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Warranty:</strong> 25 Years
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <strong>Certification:</strong> Meets international structural standards
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Installation Tab -->
+                <div class="tab-content" id="installation">
+                    <h2>Installation Guide</h2>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                        <h3>Installation Overview</h3>
+                        <p style="color: var(--text-light); line-height: 1.8;">
+                            This racking system is designed for straightforward installation by professionals or
+                            experienced DIY installers. The kit includes all components needed for a complete installation.
+                        </p>
+
+                        <h3 style="margin-top: 2rem;">Installation Steps</h3>
+                        <ol style="color: var(--text-light); line-height: 2;">
+                            <li><strong>Plan Layout:</strong> Determine panel placement and orientation on roof</li>
+                            <li><strong>Mark Rafter Locations:</strong> Use stud finder to locate roof rafters/trusses</li>
+                            <li><strong>Install Roof Attachments:</strong> Secure Flashfoot or L-feet to rafters with flashing</li>
+                            <li><strong>Mount Rails:</strong> Attach aluminum rails to roof attachments</li>
+                            <li><strong>Install End Clamps:</strong> Place end clamps at rail ends</li>
+                            <li><strong>Mount First Panel:</strong> Lift and secure first panel with clamps</li>
+                            <li><strong>Install Mid Clamps:</strong> Secure between panels as you add each one</li>
+                            <li><strong>Ground System:</strong> Connect bonding jumpers for electrical safety</li>
+                            <li><strong>Final Inspection:</strong> Verify all connections and tighten to torque specs</li>
+                        </ol>
+
+                        <h3 style="margin-top: 2rem;">Tools Required</h3>
+                        <ul style="color: var(--text-light); line-height: 1.8;">
+                            <li>Impact driver or drill</li>
+                            <li>Socket set (10mm, 13mm)</li>
+                            <li>Torque wrench (recommended)</li>
+                            <li>Tape measure and chalk line</li>
+                            <li>Stud finder</li>
+                            <li>Safety equipment (harness, gloves, non-slip shoes)</li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem;">Safety Notes</h3>
+                        <p style="color: var(--text-light); line-height: 1.8;">
+                            ⚠️ <strong>Important:</strong> Roof work is dangerous. Always use proper fall protection equipment.
+                            If you're not comfortable working on a roof, please hire a professional installer.
+                            Contact us for recommendations in your area.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Surya Ghar Kits</h3>
+                    <p>123 Solar Street, Green Energy Park<br>
+                    Mumbai, Maharashtra 400001<br>
+                    GSTIN: 27XXXXX1234X1ZX</p>
+                    <p><i class="fas fa-phone"></i> +91 9467643905<br>
+                    <i class="fas fa-envelope"></i> info@suryagharkits.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#shipping">Shipping & Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Get industry updates and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Surya Ghar Kits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Size selection
+        function selectSize(element) {
+            // Remove selected class from all options
+            document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+
+            // Add selected class to clicked option
+            element.classList.add('selected');
+
+            // Update price and image
+            const price = element.getAttribute('data-price');
+            const image = element.getAttribute('data-image');
+            document.getElementById('productPrice').textContent = '₹' + parseInt(price).toLocaleString('en-IN');
+            document.getElementById('mainImage').src = 'https://shopsolarkits.com/cdn/shop/files/' + image + '?v=1725495803&width=800';
+        }
+    </script>
+</body>
+</html>

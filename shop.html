@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse pre-engineered solar kits for EPCs. On-Grid, Off-Grid, and Hybrid kits from 1kW to 100kW.">
+    <title>Our Kits - Surya Ghar Kits</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Surya Ghar Kits</a></h1>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html" class="active">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#partner">Become a Partner</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="bulk-orders.html" class="btn btn-primary">Get a Bulk Quote</a>
+                    <button class="icon-btn" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+                    <button class="icon-btn"><i class="fas fa-user"></i></button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Pre-Engineered Solar Kits for EPCs</h1>
+            <p>Complete solar solutions with all components you need</p>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-layout">
+                <!-- Filters Sidebar -->
+                <aside class="shop-filters">
+                    <h3>Filter Kits</h3>
+
+                    <div class="filter-group">
+                        <h4>Kit Type</h4>
+                        <label><input type="checkbox" name="type" value="on-grid"> On-Grid</label>
+                        <label><input type="checkbox" name="type" value="off-grid"> Off-Grid</label>
+                        <label><input type="checkbox" name="type" value="hybrid"> Hybrid</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>System Capacity (kW)</h4>
+                        <label><input type="checkbox" name="capacity" value="1-3"> 1-3 kW</label>
+                        <label><input type="checkbox" name="capacity" value="3-5"> 3-5 kW</label>
+                        <label><input type="checkbox" name="capacity" value="5-10"> 5-10 kW</label>
+                        <label><input type="checkbox" name="capacity" value="10-25"> 10-25 kW</label>
+                        <label><input type="checkbox" name="capacity" value="25-50"> 25-50 kW</label>
+                        <label><input type="checkbox" name="capacity" value="50+"> 50+ kW</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Panel Manufacturer</h4>
+                        <label><input type="checkbox" name="panel" value="waaree"> Waaree</label>
+                        <label><input type="checkbox" name="panel" value="adani"> Adani Solar</label>
+                        <label><input type="checkbox" name="panel" value="vikram"> Vikram Solar</label>
+                        <label><input type="checkbox" name="panel" value="tata"> Tata Power Solar</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Inverter Manufacturer</h4>
+                        <label><input type="checkbox" name="inverter" value="sungrow"> Sungrow</label>
+                        <label><input type="checkbox" name="inverter" value="goodwe"> Goodwe</label>
+                        <label><input type="checkbox" name="inverter" value="havells"> Havells</label>
+                        <label><input type="checkbox" name="inverter" value="luminous"> Luminous</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <input type="range" id="priceRange" min="50000" max="5000000" step="10000" value="5000000">
+                        <div class="price-display">Up to ₹<span id="priceValue">50,00,000</span></div>
+                    </div>
+
+                    <button class="btn btn-outline btn-block" id="clearFilters">Clear Filters</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="shop-products">
+                    <div class="shop-header">
+                        <p class="results-count"><span id="productCount">9</span> Products Found</p>
+                        <select id="sortBy" class="sort-select">
+                            <option value="featured">Sort by: Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="capacity">Capacity</option>
+                        </select>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Product Card 1 -->
+                        <div class="product-card" data-type="on-grid" data-capacity="10" data-panel="waaree" data-inverter="sungrow" data-price="485000">
+                            <div class="product-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="product-badge">Popular</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>10kW On-Grid Solar Kit</h3>
+                                <p class="product-brand">Waaree Panels & Sungrow Inverter</p>
+                                <p class="product-specs">445Wp Mono PERC Panels | 10kW 3-Phase Inverter</p>
+                                <p class="product-price">₹4,85,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="1">Add to Cart</button>
+                                    <a href="product-detail.html?id=1" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="product-card" data-type="on-grid" data-capacity="5" data-panel="adani" data-inverter="goodwe" data-price="245000">
+                            <div class="product-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>5kW On-Grid Solar Kit</h3>
+                                <p class="product-brand">Adani Panels & Goodwe Inverter</p>
+                                <p class="product-specs">540Wp Mono PERC Panels | 5kW Single-Phase Inverter</p>
+                                <p class="product-price">₹2,45,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="2">Add to Cart</button>
+                                    <a href="product-detail.html?id=2" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 - OGK-PLUS Complete Off-Grid Kit -->
+                        <div class="product-card mouse-parallax" data-type="off-grid" data-capacity="3.28" data-panel="mono" data-inverter="ogk" data-price="482000">
+                            <div class="product-image parallax-layer">
+                                <img src="images/products/ogk-plus.png" alt="OGK-PLUS Complete Off-Grid Solar Kit" onerror="this.onerror=null; this.src='https://shopsolarkits.com/cdn/shop/files/1_d7e6eb55-a76f-4ce2-a03e-73ee26fe13b6.png?v=1725495618&width=600';">
+                            </div>
+                            <div class="product-info">
+                                <h3>3.28kW Complete Off-Grid Solar Kit</h3>
+                                <p class="product-brand">OGK-PLUS | 8x410W Panels</p>
+                                <p class="product-specs">6,000W Inverter | 10.24kWh Battery Bank | Complete Setup</p>
+                                <p class="product-price">₹4,82,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="ogk-plus">Add to Cart</button>
+                                    <a href="product-ogk-plus.html" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3B - Premium Off-Grid Kit -->
+                        <div class="product-card mouse-parallax" data-type="off-grid" data-capacity="3.28" data-panel="mono" data-inverter="ogk" data-price="705000">
+                            <div class="product-image parallax-layer">
+                                <img src="images/products/ogk-plus.png" alt="OGK-PLUS Premium Off-Grid Solar Kit" onerror="this.onerror=null; this.src='https://shopsolarkits.com/cdn/shop/files/1_d7e6eb55-a76f-4ce2-a03e-73ee26fe13b6.png?v=1725495618&width=600';">
+                                <span class="product-badge">Premium</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>3.28kW Premium Off-Grid Solar Kit</h3>
+                                <p class="product-brand">OGK-PLUS | 8x410W Panels</p>
+                                <p class="product-specs">6,000W Inverter | 14.3kWh Battery Bank | Ground Mount</p>
+                                <p class="product-price">₹7,05,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="ogk-plus-premium">Add to Cart</button>
+                                    <a href="product-ogk-plus.html?variant=premium" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 4 -->
+                        <div class="product-card" data-type="hybrid" data-capacity="10" data-panel="waaree" data-inverter="goodwe" data-price="625000">
+                            <div class="product-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                                <span class="product-badge">New</span>
+                            </div>
+                            <div class="product-info">
+                                <h3>10kW Hybrid Solar Kit</h3>
+                                <p class="product-brand">Waaree Panels & Goodwe Inverter</p>
+                                <p class="product-specs">540Wp Panels | 10kW Hybrid Inverter | 200Ah Battery x 8</p>
+                                <p class="product-price">₹6,25,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="4">Add to Cart</button>
+                                    <a href="product-detail.html?id=4" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 5 -->
+                        <div class="product-card" data-type="on-grid" data-capacity="3" data-panel="tata" data-inverter="havells" data-price="165000">
+                            <div class="product-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>3kW On-Grid Solar Kit</h3>
+                                <p class="product-brand">Tata Panels & Havells Inverter</p>
+                                <p class="product-specs">445Wp Mono PERC Panels | 3kW Single-Phase Inverter</p>
+                                <p class="product-price">₹1,65,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="5">Add to Cart</button>
+                                    <a href="product-detail.html?id=5" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 6 -->
+                        <div class="product-card" data-type="on-grid" data-capacity="25" data-panel="adani" data-inverter="sungrow" data-price="1125000">
+                            <div class="product-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-solar-panel"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3>25kW On-Grid Solar Kit</h3>
+                                <p class="product-brand">Adani Panels & Sungrow Inverter</p>
+                                <p class="product-specs">540Wp Bifacial Panels | 25kW 3-Phase Inverter</p>
+                                <p class="product-price">₹11,25,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="6">Add to Cart</button>
+                                    <a href="product-detail.html?id=6" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 7 - IronRidge 6 Panel Roof Rack -->
+                        <div class="product-card mouse-parallax" data-type="on-grid" data-capacity="2.4" data-panel="universal" data-inverter="none" data-price="71500">
+                            <div class="product-image parallax-layer">
+                                <img src="images/products/roof-rack-6.jpg" alt="IronRidge 6 Panel Roof Rack Kit" onerror="this.onerror=null; this.src='https://shopsolarkits.com/cdn/shop/files/PVX-ROOF-MOUNT-KIT-6.jpg?v=1725495803&width=600';">
+                            </div>
+                            <div class="product-info">
+                                <h3>Solar Panel Roof Rack Kit - 6 Panels</h3>
+                                <p class="product-brand">IronRidge | TPS</p>
+                                <p class="product-specs">Compatible with 300-410W Panels | Complete Racking Kit</p>
+                                <p class="product-price">₹71,500</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="rack-6">Add to Cart</button>
+                                    <a href="product-roof-rack.html?size=6" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 8 - IronRidge 12 Panel Roof Rack -->
+                        <div class="product-card mouse-parallax" data-type="on-grid" data-capacity="4.8" data-panel="universal" data-inverter="none" data-price="133000">
+                            <div class="product-image parallax-layer">
+                                <img src="images/products/roof-rack-12.jpg" alt="IronRidge 12 Panel Roof Rack Kit" onerror="this.onerror=null; this.src='https://shopsolarkits.com/cdn/shop/files/PVX-ROOF-MOUNT-KIT-12.jpg?v=1725495803&width=600';">
+                            </div>
+                            <div class="product-info">
+                                <h3>Solar Panel Roof Rack Kit - 12 Panels</h3>
+                                <p class="product-brand">IronRidge | TPS</p>
+                                <p class="product-specs">Compatible with 300-410W Panels | Complete Racking Kit</p>
+                                <p class="product-price">₹1,33,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="rack-12">Add to Cart</button>
+                                    <a href="product-roof-rack.html?size=12" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 9 - IronRidge 24 Panel Roof Rack -->
+                        <div class="product-card mouse-parallax" data-type="on-grid" data-capacity="9.6" data-panel="universal" data-inverter="none" data-price="207000">
+                            <div class="product-image parallax-layer">
+                                <img src="images/products/roof-rack-24.jpg" alt="IronRidge 24 Panel Roof Rack Kit" onerror="this.onerror=null; this.src='https://shopsolarkits.com/cdn/shop/files/PVX-ROOF-MOUNT-KIT-24.jpg?v=1725495803&width=600';">
+                            </div>
+                            <div class="product-info">
+                                <h3>Solar Panel Roof Rack Kit - 24 Panels</h3>
+                                <p class="product-brand">IronRidge | TPS</p>
+                                <p class="product-specs">Compatible with 300-410W Panels | Complete Racking Kit</p>
+                                <p class="product-price">₹2,07,000</p>
+                                <div class="product-actions">
+                                    <button class="btn btn-primary btn-block add-to-cart" data-id="rack-24">Add to Cart</button>
+                                    <a href="product-roof-rack.html?size=24" class="btn btn-outline btn-block">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Surya Ghar Kits</h3>
+                    <p>123 Solar Street, Green Energy Park<br>
+                    Mumbai, Maharashtra 400001<br>
+                    GSTIN: 27XXXXX1234X1ZX</p>
+                    <p><i class="fas fa-phone"></i> +91 9467643905<br>
+                    <i class="fas fa-envelope"></i> info@suryagharkits.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#shipping">Shipping & Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Get industry updates and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Surya Ghar Kits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/shop.js"></script>
+    <script src="js/parallax.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Update scroll progress
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+    </script>
+</body>
+</html>

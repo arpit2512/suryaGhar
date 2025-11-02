@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree /F \"C:\\Users\\Home\\Downloads\\suryagharkits\" 2)",
+      "Bash(nul)",
+      "Bash(dir /S /B \"C:\\Users\\Home\\Downloads\\suryagharkits\")",
+      "WebFetch(domain:shopsolarkits.com)",
+      "Bash(powershell -ExecutionPolicy Bypass -File download-images.ps1)",
+      "Bash(python download_images.py:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

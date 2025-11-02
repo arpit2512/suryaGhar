@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Request bulk quotes for large-scale solar projects. Custom configurations and competitive pricing for EPCs.">
+    <title>Bulk Orders - Surya Ghar Kits</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Surya Ghar Kits</a></h1>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Our Kits</a></li>
+                        <li><a href="bulk-orders.html" class="active">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#partner">Become a Partner</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="bulk-orders.html" class="btn btn-primary">Get a Bulk Quote</a>
+                    <button class="icon-btn" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+                    <button class="icon-btn"><i class="fas fa-user"></i></button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Power Your Projects with Custom & Bulk Orders</h1>
+            <p>Volume pricing and dedicated support for your large-scale projects</p>
+        </div>
+    </section>
+
+    <!-- Bulk Inquiry Section -->
+    <section class="bulk-inquiry-section">
+        <div class="container">
+            <div class="bulk-intro">
+                <p class="intro-text">At SuryaKit Solutions, we specialize in supplying large-scale and custom solar kit orders for our EPC partners. Benefit from volume pricing, dedicated account management, and logistics tailored to your project schedule. Fill out the form below, and our team will get back to you with a detailed quote within 24 business hours.</p>
+            </div>
+
+            <div class="form-container">
+                <form id="bulkOrderForm" class="bulk-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="companyName">Company Name <span class="required">*</span></label>
+                            <input type="text" id="companyName" name="companyName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gstin">GSTIN</label>
+                            <input type="text" id="gstin" name="gstin" placeholder="27XXXXX1234X1ZX">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Project Site Location (City, State) <span class="required">*</span></label>
+                            <input type="text" id="location" name="location" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="projectCapacity">Total Project Capacity (kW or MW) <span class="required">*</span></label>
+                            <input type="text" id="projectCapacity" name="projectCapacity" placeholder="e.g., 500 kW or 2 MW" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="kitType">Required Kit Type <span class="required">*</span></label>
+                            <select id="kitType" name="kitType" required>
+                                <option value="">Select Kit Type</option>
+                                <option value="on-grid">On-Grid</option>
+                                <option value="off-grid">Off-Grid</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="custom">Custom</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="capacityPerKit">Capacity Per Kit <span class="required">*</span></label>
+                            <input type="text" id="capacityPerKit" name="capacityPerKit" placeholder="e.g., 10 kW" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="numKits">Total Number of Kits Required <span class="required">*</span></label>
+                            <input type="number" id="numKits" name="numKits" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="componentBrands">Preferred Component Brands</label>
+                            <input type="text" id="componentBrands" name="componentBrands" placeholder="e.g., Waaree panels, Sungrow inverter">
+                        </div>
+                        <div class="form-group">
+                            <label for="requiredDate">Required by Date</label>
+                            <input type="date" id="requiredDate" name="requiredDate">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="additionalDetails">Additional Details / Message</label>
+                        <textarea id="additionalDetails" name="additionalDetails" rows="5" placeholder="Please provide any specific requirements, technical specifications, or questions..."></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="fileUpload">Upload Documents (BOM, Site Plans, etc.)</label>
+                        <div class="file-upload-wrapper">
+                            <input type="file" id="fileUpload" name="fileUpload" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.png">
+                            <label for="fileUpload" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Choose files or drag & drop here</span>
+                            </label>
+                            <div id="fileList" class="file-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">Submit Inquiry</button>
+                        <p class="form-note">* Required fields. We'll respond within 24 business hours.</p>
+                    </div>
+                </form>
+
+                <div id="formSuccess" class="form-success" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Thank You for Your Inquiry!</h3>
+                    <p>We've received your bulk order request and our team will review it shortly. You'll receive a detailed quote within 24 business hours.</p>
+                    <button class="btn btn-outline" onclick="location.reload()">Submit Another Inquiry</button>
+                </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="bulk-benefits">
+                <h2>Why Choose Bulk Orders with SuryaKit?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <i class="fas fa-percentage"></i>
+                        <h3>Volume Discounts</h3>
+                        <p>Competitive pricing that improves with order size</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Dedicated Account Manager</h3>
+                        <p>Single point of contact for all your needs</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Custom Configurations</h3>
+                        <p>Tailored solutions to match your specifications</p>
+                    </div>
+                    <div class="benefit-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3>Flexible Scheduling</h3>
+                        <p>Delivery aligned with your project timeline</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Surya Ghar Kits</h3>
+                    <p>123 Solar Street, Green Energy Park<br>
+                    Mumbai, Maharashtra 400001<br>
+                    GSTIN: 27XXXXX1234X1ZX</p>
+                    <p><i class="fas fa-phone"></i> +91 9467643905<br>
+                    <i class="fas fa-envelope"></i> info@suryagharkits.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#shipping">Shipping & Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Get industry updates and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Surya Ghar Kits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/bulk-form.js"></script>
+</body>
+</html>

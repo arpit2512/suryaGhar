@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3.28kW Complete Off-Grid Solar Power System with 6,000W inverter and battery storage">
+    <title>OGK-PLUS Complete Off-Grid Solar Kit - Surya Ghar Kits</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-detail-section {
+            padding: 3rem 0;
+        }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-gallery {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .product-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-detail-info h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-detail-price {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stars {
+            color: #ffd93d;
+        }
+
+        .variant-selector {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .variant-option {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .variant-option:hover {
+            border-color: var(--primary-color);
+        }
+
+        .variant-option.selected {
+            border-color: var(--primary-color);
+            background: rgba(255, 107, 0, 0.1);
+        }
+
+        .product-detail-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .product-tabs {
+            margin-top: 3rem;
+        }
+
+        .tabs-nav {
+            display: flex;
+            gap: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .tab-button.active {
+            color: var(--primary-color);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .components-list {
+            list-style: none;
+        }
+
+        .components-list li {
+            padding: 1rem;
+            background: var(--bg-light);
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        .components-list h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .components-list p {
+            color: var(--text-light);
+            margin: 0.25rem 0;
+        }
+
+        .feature-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .feature-highlight {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+
+        .feature-highlight i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-detail-actions {
+                flex-direction: column;
+            }
+
+            .tabs-nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Surya Ghar Kits</a></h1>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html" class="active">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#partner">Become a Partner</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="bulk-orders.html" class="btn btn-primary">Get a Bulk Quote</a>
+                    <button class="icon-btn" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+                    <button class="icon-btn"><i class="fas fa-user"></i></button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container" style="padding: 1rem 20px;">
+        <p style="color: var(--text-light);">
+            <a href="index.html" style="text-decoration: none; color: var(--text-light);">Home</a> /
+            <a href="shop.html" style="text-decoration: none; color: var(--text-light);">Our Kits</a> /
+            <span>OGK-PLUS Complete Off-Grid Solar Kit</span>
+        </p>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <img src="https://shopsolarkits.com/cdn/shop/files/1_d7e6eb55-a76f-4ce2-a03e-73ee26fe13b6.png?v=1725495618&width=800" alt="OGK-PLUS Complete Off-Grid Solar Kit">
+                </div>
+
+                <div class="product-detail-info">
+                    <h1>3.28kW Complete Off-Grid Solar Power System</h1>
+                    <p class="product-brand">OGK-PLUS | 6,000W 120/240V | 8x410W Solar Panels</p>
+
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span style="color: var(--text-light);">4.8 out of 5 (64 reviews)</span>
+                    </div>
+
+                    <div class="product-detail-price" id="productPrice">₹4,82,000</div>
+
+                    <p style="color: var(--text-light); line-height: 1.8;">
+                        Complete all-in-one off-grid solar solution perfect for remote locations, backup power,
+                        or areas with unreliable grid power. This comprehensive kit includes everything you need:
+                        high-efficiency solar panels, powerful inverter, lithium battery bank, and complete setup diagram.
+                    </p>
+
+                    <div class="variant-selector">
+                        <h3>Select Configuration:</h3>
+
+                        <div class="variant-option selected" data-price="482000" data-battery="10.24" onclick="selectVariant(this)">
+                            <strong>Budget-Friendly Configuration</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: var(--text-light);">
+                                10.24kWh Battery Bank | ALPHA 5 PRO Batteries | Self-Install Racking<br>
+                                <strong style="color: var(--primary-color);">₹4,82,000</strong>
+                            </p>
+                        </div>
+
+                        <div class="variant-option" data-price="580000" data-battery="12.8" onclick="selectVariant(this)">
+                            <strong>Mid-Range Configuration</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: var(--text-light);">
+                                12.8kWh Battery Bank | EG4 LL-S Batteries | Roof Rack Kit<br>
+                                <strong style="color: var(--primary-color);">₹5,80,000</strong>
+                            </p>
+                        </div>
+
+                        <div class="variant-option" data-price="705000" data-battery="14.3" onclick="selectVariant(this)">
+                            <strong>Premium Configuration</strong>
+                            <p style="margin: 0.5rem 0 0 0; color: var(--text-light);">
+                                14.3kWh Battery Bank | EG4 WallMount (Outdoor) | Ground Installation<br>
+                                <strong style="color: var(--primary-color);">₹7,05,000</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feature-highlights">
+                        <div class="feature-highlight">
+                            <i class="fas fa-solar-panel"></i>
+                            <h4>3.28kW</h4>
+                            <p>Solar Array</p>
+                        </div>
+                        <div class="feature-highlight">
+                            <i class="fas fa-bolt"></i>
+                            <h4>6,000W</h4>
+                            <p>Inverter Power</p>
+                        </div>
+                        <div class="feature-highlight">
+                            <i class="fas fa-battery-full"></i>
+                            <h4 id="batteryCapacity">10.24kWh</h4>
+                            <p>Battery Storage</p>
+                        </div>
+                    </div>
+
+                    <div class="product-detail-actions">
+                        <button class="btn btn-primary btn-large add-to-cart" data-id="ogk-plus">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <a href="bulk-orders.html" class="btn btn-outline btn-large">
+                            <i class="fas fa-file-alt"></i> Request Bulk Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-button active" data-tab="components">What's Included</button>
+                    <button class="tab-button" data-tab="specs">Specifications</button>
+                    <button class="tab-button" data-tab="features">Features & Benefits</button>
+                    <button class="tab-button" data-tab="installation">Installation</button>
+                </div>
+
+                <!-- Components Tab -->
+                <div class="tab-content active" id="components">
+                    <h2>Complete Kit Components</h2>
+                    <ul class="components-list">
+                        <li>
+                            <h4><i class="fas fa-solar-panel"></i> Solar Panel Array</h4>
+                            <p><strong>8x 410W Monocrystalline Solar Panels</strong></p>
+                            <p>Total Capacity: 3.28kWp | High Efficiency: 20%+ | 25-Year Performance Warranty</p>
+                            <p>Tier-1 manufacturer | Weather-resistant | Corrosion-proof frame</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-microchip"></i> Inverter/Charger System</h4>
+                            <p><strong>6,000W 120/240V Split-Phase Pure Sine Wave Inverter</strong></p>
+                            <p>Max Surge: 18,000W (3 seconds) | Efficiency: 96%+ | Built-in solar charge controller</p>
+                            <p>LCD display with system monitoring | Multiple protection features</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-battery-full"></i> Lithium Battery Bank</h4>
+                            <p><strong>Battery Capacity: 10.24kWh to 14.3kWh</strong> (depending on configuration)</p>
+                            <p>LiFePO4 technology | 6,000+ cycle life | Built-in BMS protection</p>
+                            <p>10-Year warranty | Maintenance-free | Temperature management</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-th"></i> Mounting Structure</h4>
+                            <p><strong>Complete racking system for installation</strong></p>
+                            <p>Options: Self-install, Roof rack, or Ground mount</p>
+                            <p>Weather-resistant materials | Wind-rated design | All hardware included</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-plug"></i> Cables & Connectors</h4>
+                            <p>Solar DC cables with MC4 connectors | Battery interconnect cables</p>
+                            <p>AC wiring accessories | Cable management clips and ties</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-file-alt"></i> Documentation & Support</h4>
+                            <p>Professional setup diagram | Installation manual</p>
+                            <p>System commissioning checklist | Lifetime customer support</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technical Specs Tab -->
+                <div class="tab-content" id="specs">
+                    <h2>Technical Specifications</h2>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                        <h3>System Overview</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>System Type:</strong> Complete Off-Grid
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Solar Array:</strong> 3.28kWp (8x 410W panels)
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Inverter Output:</strong> 6,000W continuous / 18,000W surge
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Voltage:</strong> 120/240V Split-Phase
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Battery Storage:</strong> 10.24kWh - 14.3kWh (configurable)
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Battery Type:</strong> LiFePO4 Lithium
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Expected Daily Generation:</strong> 13-16 kWh (location dependent)
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <strong>Operating Temperature:</strong> -20°C to +60°C
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Features Tab -->
+                <div class="tab-content" id="features">
+                    <h2>Features & Benefits</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-check-circle" style="color: var(--success-color);"></i> Complete Solution</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>Everything included in one package</li>
+                                <li>No need to source individual components</li>
+                                <li>All components tested for compatibility</li>
+                                <li>Professional setup diagram provided</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-bolt" style="color: var(--primary-color);"></i> Reliable Power</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>6,000W continuous power output</li>
+                                <li>18,000W surge capacity for motor starts</li>
+                                <li>Pure sine wave for sensitive electronics</li>
+                                <li>Battery backup for 24/7 power</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-battery-full" style="color: var(--accent-color);"></i> Long-Life Batteries</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>LiFePO4 technology - safest lithium chemistry</li>
+                                <li>6,000+ charge cycles</li>
+                                <li>10-Year warranty included</li>
+                                <li>Maintenance-free operation</li>
+                            </ul>
+                        </div>
+
+                        <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                            <h3><i class="fas fa-tools" style="color: var(--secondary-color);"></i> Flexible Installation</h3>
+                            <ul style="color: var(--text-light); line-height: 1.8;">
+                                <li>Multiple mounting options available</li>
+                                <li>DIY-friendly with detailed instructions</li>
+                                <li>Professional installation support available</li>
+                                <li>Expandable system design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Installation Tab -->
+                <div class="tab-content" id="installation">
+                    <h2>Installation Information</h2>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                        <h3>Installation Options</h3>
+                        <p><strong>1. Self-Installation (Budget-Friendly)</strong></p>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                            Includes basic racking materials. Suitable for those with electrical experience and proper tools.
+                            Professional setup diagram and detailed instructions provided.
+                        </p>
+
+                        <p><strong>2. Roof Rack Installation (Mid-Range)</strong></p>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                            Complete roof mounting system with all hardware. Designed for pitched or flat roofs.
+                            Includes flashing, L-feet, rails, and all mounting hardware.
+                        </p>
+
+                        <p><strong>3. Ground Mount Installation (Premium)</strong></p>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+                            Professional ground mounting system. Ideal for properties with available land space.
+                            Includes foundation materials and adjustable tilt for optimal sun exposure.
+                        </p>
+
+                        <h3 style="margin-top: 2rem;">What You'll Need</h3>
+                        <ul style="color: var(--text-light); line-height: 1.8;">
+                            <li>Basic electrical tools (wire strippers, crimpers, multimeter)</li>
+                            <li>Mounting tools (drill, wrenches, ladder)</li>
+                            <li>Safety equipment (harness for roof work, gloves, safety glasses)</li>
+                            <li>Local electrical permits (requirements vary by location)</li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem;">Professional Support</h3>
+                        <p style="color: var(--text-light);">
+                            Our team provides lifetime technical support. Contact us for installation guidance,
+                            troubleshooting, or to arrange professional installation services in your area.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Surya Ghar Kits</h3>
+                    <p>123 Solar Street, Green Energy Park<br>
+                    Mumbai, Maharashtra 400001<br>
+                    GSTIN: 27XXXXX1234X1ZX</p>
+                    <p><i class="fas fa-phone"></i> +91 9467643905<br>
+                    <i class="fas fa-envelope"></i> info@suryagharkits.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#shipping">Shipping & Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Get industry updates and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Surya Ghar Kits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Variant selection
+        function selectVariant(element) {
+            // Remove selected class from all options
+            document.querySelectorAll('.variant-option').forEach(opt => opt.classList.remove('selected'));
+
+            // Add selected class to clicked option
+            element.classList.add('selected');
+
+            // Update price
+            const price = element.getAttribute('data-price');
+            const battery = element.getAttribute('data-battery');
+            document.getElementById('productPrice').textContent = '₹' + parseInt(price).toLocaleString('en-IN');
+            document.getElementById('batteryCapacity').textContent = battery + 'kWh';
+        }
+    </script>
+</body>
+</html>

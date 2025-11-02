@@ -1,0 +1,16 @@
+Product Images Directory
+
+Place the following images in this folder:
+- ogk-plus.png
+- roof-rack-6.jpg
+- roof-rack-8.jpg
+- roof-rack-12.jpg
+- roof-rack-18.jpg
+- roof-rack-24.jpg
+- roof-rack-36.jpg
+
+Download from:
+https://shopsolarkits.com/products/complete-all-in-one-solar-kit-ogk-plus
+https://shopsolarkits.com/products/solar-panel-roof-rack-kit
+
+Right-click images and save them to this folder.

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed specifications for solar kit">
+    <title>Product Details - Surya Ghar Kits</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-detail-section {
+            padding: 3rem 0;
+        }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-gallery {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        .product-gallery i {
+            font-size: 8rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        .product-detail-info h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-detail-price {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+
+        .product-detail-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .product-tabs {
+            margin-top: 3rem;
+        }
+
+        .tabs-nav {
+            display: flex;
+            gap: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        .tab-button {
+            background: none;
+            border: none;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .tab-button.active {
+            color: var(--primary-color);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .components-list {
+            list-style: none;
+        }
+
+        .components-list li {
+            padding: 1rem;
+            background: var(--bg-light);
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        .components-list h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .components-list p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-detail-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="index.html" style="text-decoration: none; color: inherit;">Surya Ghar Kits</a></h1>
+                </div>
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html" class="active">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#partner">Become a Partner</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="bulk-orders.html" class="btn btn-primary">Get a Bulk Quote</a>
+                    <button class="icon-btn" id="cartBtn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+                    <button class="icon-btn"><i class="fas fa-user"></i></button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container" style="padding: 1rem 20px;">
+        <p style="color: var(--text-light);">
+            <a href="index.html" style="text-decoration: none; color: var(--text-light);">Home</a> /
+            <a href="shop.html" style="text-decoration: none; color: var(--text-light);">Our Kits</a> /
+            <span>10kW On-Grid Solar Kit</span>
+        </p>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-gallery">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+
+                <div class="product-detail-info">
+                    <h1>10kW On-Grid Solar Kit</h1>
+                    <p class="product-brand">Waaree Panels & Sungrow Inverter</p>
+                    <p style="color: var(--text-light);">445Wp Mono PERC Panels | 10kW 3-Phase Inverter</p>
+
+                    <div class="product-detail-price">₹4,85,000</div>
+
+                    <p style="color: var(--text-light); line-height: 1.8;">
+                        Complete 10kW on-grid solar kit designed for commercial and large residential installations.
+                        This kit includes high-efficiency Waaree solar panels, Sungrow 3-phase inverter,
+                        hot-dip galvanized mounting structure, and all necessary electrical components.
+                        All components are BIS/ALMM certified with manufacturer warranties.
+                    </p>
+
+                    <div class="product-detail-actions">
+                        <button class="btn btn-primary btn-large add-to-cart" data-id="1">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <a href="bulk-orders.html" class="btn btn-outline btn-large">
+                            <i class="fas fa-file-alt"></i> Add to Bulk Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tabs-nav">
+                    <button class="tab-button active" data-tab="components">What's in the Box?</button>
+                    <button class="tab-button" data-tab="specs">Technical Specs</button>
+                    <button class="tab-button" data-tab="warranty">Warranty</button>
+                    <button class="tab-button" data-tab="shipping">Shipping & Delivery</button>
+                </div>
+
+                <!-- Components Tab -->
+                <div class="tab-content active" id="components">
+                    <h2>Complete Kit Components</h2>
+                    <ul class="components-list">
+                        <li>
+                            <h4><i class="fas fa-solar-panel"></i> Solar PV Modules</h4>
+                            <p>Waaree 445Wp Mono PERC Solar Panels x 23</p>
+                            <p>Total Capacity: 10.235 kWp | Efficiency: 21%+ | 25-Year Performance Warranty</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-microchip"></i> Solar Inverter</h4>
+                            <p>Sungrow 10kW 3-Phase On-Grid Inverter (Model: SG10KTL-M)</p>
+                            <p>Max Efficiency: 98.4% | MPPT Efficiency: 99.9% | IP65 Rated | 5-Year Warranty</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-th"></i> Mounting Structure</h4>
+                            <p>Hot-Dip Galvanized Iron (GI) Structure for RCC Roof</p>
+                            <p>Wind Load: 150 km/h | Corrosion Resistant | 10-Year Warranty</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-box"></i> Array Junction Box (AJB)</h4>
+                            <p>4-in-2-out AJB with 15A DC MCB & Surge Protection Device (SPD)</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-box"></i> AC Distribution Box (ACDB)</h4>
+                            <p>3-Phase ACDB with 25A AC MCB & SPD</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-plug"></i> Cables & Connectors</h4>
+                            <p>DC Cable: 4mm² x 100m (Red & Black) | AC Cable: 6mm² x 50m (3-Phase)</p>
+                            <p>MC4 Connectors: 50 Pairs | Cable Ties, Clips & Accessories</p>
+                        </li>
+                        <li>
+                            <h4><i class="fas fa-bolt"></i> Earthing & Lightning Protection</h4>
+                            <p>Copper Earthing Kit with Lightning Arrestor</p>
+                            <p>Earthing Rod, Plates, GI Wire & Chemical Compound</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Technical Specs Tab -->
+                <div class="tab-content" id="specs">
+                    <h2>Technical Specifications</h2>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                        <h3>System Overview</h3>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>System Type:</strong> On-Grid (Grid-Tied)
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Total DC Capacity:</strong> 10.235 kWp
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Inverter AC Output:</strong> 10 kW
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Phase:</strong> 3-Phase
+                            </li>
+                            <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+                                <strong>Expected Generation:</strong> ~13,000-14,000 kWh/year (Location dependent)
+                            </li>
+                            <li style="padding: 0.5rem 0;">
+                                <strong>Compliance:</strong> BIS Certified, ALMM Approved
+                            </li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem;">Downloadable Datasheets</h3>
+                        <p>
+                            <a href="#" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fas fa-file-pdf"></i> Waaree 445Wp Panel Datasheet (PDF)
+                            </a>
+                        </p>
+                        <p>
+                            <a href="#" style="color: var(--primary-color); text-decoration: none;">
+                                <i class="fas fa-file-pdf"></i> Sungrow 10kW Inverter Datasheet (PDF)
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Warranty Tab -->
+                <div class="tab-content" id="warranty">
+                    <h2>Comprehensive Warranty Coverage</h2>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin-bottom: 1rem;">
+                        <h3>Solar Panels - Waaree</h3>
+                        <p><strong>Product Warranty:</strong> 12 Years against manufacturing defects</p>
+                        <p><strong>Performance Warranty:</strong> 25 Years</p>
+                        <ul>
+                            <li>90% power output after 10 years</li>
+                            <li>80% power output after 25 years</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px; margin-bottom: 1rem;">
+                        <h3>Solar Inverter - Sungrow</h3>
+                        <p><strong>Standard Warranty:</strong> 5 Years</p>
+                        <p><strong>Extended Warranty:</strong> Available up to 10 years (optional)</p>
+                    </div>
+
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                        <h3>Mounting Structure</h3>
+                        <p><strong>Warranty:</strong> 10 Years against corrosion and structural failure</p>
+                    </div>
+
+                    <p style="margin-top: 2rem; color: var(--text-light);">
+                        All warranty claims are handled directly with manufacturers. SuryaKit Solutions provides
+                        complete documentation and support for warranty registration and claims processing.
+                    </p>
+                </div>
+
+                <!-- Shipping Tab -->
+                <div class="tab-content" id="shipping">
+                    <h2>Shipping & Delivery Information</h2>
+                    <div style="background: var(--bg-light); padding: 2rem; border-radius: 10px;">
+                        <h3>Delivery Timeframes</h3>
+                        <ul>
+                            <li><strong>Metro Cities (Mumbai, Delhi, Bangalore, etc.):</strong> 7-10 business days</li>
+                            <li><strong>Tier 2 Cities:</strong> 10-14 business days</li>
+                            <li><strong>Remote Locations:</strong> 14-21 business days</li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem;">Shipping Details</h3>
+                        <ul>
+                            <li>Free shipping on all orders across India</li>
+                            <li>Door-to-door delivery with real-time tracking</li>
+                            <li>Secure packaging to prevent transit damage</li>
+                            <li>Insurance coverage on all shipments</li>
+                            <li>Installation team can be arranged (additional charges apply)</li>
+                        </ul>
+
+                        <h3 style="margin-top: 2rem;">What to Expect on Delivery</h3>
+                        <p>All components are carefully packaged and palletized. You will receive:</p>
+                        <ul>
+                            <li>Solar panels in manufacturer's original packaging</li>
+                            <li>Inverter and electrical components in protective boxes</li>
+                            <li>Mounting structure components bundled and labeled</li>
+                            <li>Complete packing list and installation guide</li>
+                            <li>Warranty cards and product certificates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Surya Ghar Kits</h3>
+                    <p>123 Solar Street, Green Energy Park<br>
+                    Mumbai, Maharashtra 400001<br>
+                    GSTIN: 27XXXXX1234X1ZX</p>
+                    <p><i class="fas fa-phone"></i> +91 9467643905<br>
+                    <i class="fas fa-envelope"></i> info@suryagharkits.com</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Our Kits</a></li>
+                        <li><a href="bulk-orders.html">Bulk Orders</a></li>
+                        <li><a href="why-choose-us.html">Why Choose Us?</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#shipping">Shipping & Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Get industry updates and exclusive offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Surya Ghar Kits. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+
+                // Remove active class from all buttons and contents
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                this.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
