@@ -1,0 +1,32 @@
+# robots.txt for Surya Ghar Kits
+
+User-agent: *
+Allow: /
+
+# Disallow admin or sensitive paths (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow search engines to crawl all main pages
+Allow: /index.html
+Allow: /shop.html
+Allow: /bulk-orders.html
+Allow: /why-choose-us.html
+Allow: /resources.html
+Allow: /tutorials.html
+Allow: /partner.html
+Allow: /contact.html
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /shipping.html
+
+# Allow CSS, JS, and images
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Sitemap location
+Sitemap: https://arpit2512.github.io/suryaGhar/sitemap.xml
+
+# Crawl-delay (optional)
+# Crawl-delay: 1
